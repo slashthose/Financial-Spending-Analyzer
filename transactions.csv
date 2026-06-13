@@ -1,0 +1,1001 @@
+Date,Description,Amount
+2025-01-01,Salary,38751
+2025-01-01,Electricity Bill,-2311
+2025-01-01,Book Purchase,-1096
+2025-01-02,Amazon,-2096
+2025-01-02,Uber,-348
+2025-01-02,Medicine,-696
+2025-01-04,Zomato,-388
+2025-01-04,Metro,-37
+2025-01-06,Metro,-41
+2025-01-06,Metro,-150
+2025-01-07,Electricity Bill,-2395
+2025-01-07,Zomato,-317
+2025-01-07,Salary,29283
+2025-01-08,Metro,-170
+2025-01-08,Metro,-50
+2025-01-09,Amazon,-2394
+2025-01-09,Metro,-123
+2025-01-09,Zomato,-418
+2025-01-09,Swiggy,-223
+2025-01-09,Uber,-487
+2025-01-10,Electricity Bill,-1110
+2025-01-10,Zomato,-508
+2025-01-10,Uber,-513
+2025-01-10,Metro,-77
+2025-01-10,Uber,-299
+2025-01-10,Swiggy,-440
+2025-01-11,Uber,-551
+2025-01-11,Swiggy,-195
+2025-01-11,Amazon,-1473
+2025-01-13,Electricity Bill,-1472
+2025-01-14,Amazon,-1262
+2025-01-14,Metro,-27
+2025-01-14,Book Purchase,-340
+2025-01-15,Amazon,-931
+2025-01-16,Electricity Bill,-1153
+2025-01-16,Electricity Bill,-1357
+2025-01-17,Electricity Bill,-2059
+2025-01-17,Amazon,-2059
+2025-01-17,Electricity Bill,-1348
+2025-01-18,Uber,-172
+2025-01-18,Swiggy,-169
+2025-01-19,Netflix,-748
+2025-01-19,Netflix,-301
+2025-01-19,Zomato,-354
+2025-01-19,Metro,-181
+2025-01-20,Netflix,-213
+2025-01-20,Netflix,-442
+2025-01-20,Netflix,-684
+2025-01-20,Salary,35978
+2025-01-20,Metro,-71
+2025-01-20,Medicine,-337
+2025-01-21,Netflix,-350
+2025-01-22,Zomato,-322
+2025-01-22,Medicine,-1218
+2025-01-22,Electricity Bill,-2154
+2025-01-22,Swiggy,-474
+2025-01-22,Zomato,-233
+2025-01-22,Medicine,-655
+2025-01-22,Amazon,-2311
+2025-01-23,Metro,-133
+2025-01-23,Zomato,-682
+2025-01-23,Metro,-158
+2025-01-24,Amazon,-2424
+2025-01-24,Electricity Bill,-1107
+2025-01-24,Amazon,-2867
+2025-01-25,Electricity Bill,-1709
+2025-01-26,Amazon,-1725
+2025-01-26,Book Purchase,-1155
+2025-01-26,Swiggy,-587
+2025-01-26,Netflix,-415
+2025-01-27,Netflix,-682
+2025-01-27,Amazon,-1640
+2025-01-27,Netflix,-766
+2025-01-28,Zomato,-646
+2025-01-29,Swiggy,-437
+2025-01-30,Amazon,-289
+2025-01-30,Salary,41477
+2025-01-30,Swiggy,-207
+2025-01-31,Zomato,-549
+2025-01-31,Book Purchase,-725
+2025-01-31,Salary,28634
+2025-02-01,Electricity Bill,-1081
+2025-02-01,Netflix,-310
+2025-02-02,Netflix,-724
+2025-02-02,Medicine,-1183
+2025-02-02,Medicine,-1322
+2025-02-02,Book Purchase,-621
+2025-02-02,Medicine,-718
+2025-02-03,Netflix,-416
+2025-02-03,Medicine,-363
+2025-02-03,Swiggy,-174
+2025-02-03,Amazon,-1391
+2025-02-04,Swiggy,-143
+2025-02-05,Zomato,-774
+2025-02-05,Book Purchase,-574
+2025-02-06,Amazon,-2940
+2025-02-06,Amazon,-2760
+2025-02-07,Medicine,-1226
+2025-02-08,Swiggy,-466
+2025-02-09,Swiggy,-634
+2025-02-09,Metro,-165
+2025-02-10,Amazon,-1590
+2025-02-10,Zomato,-664
+2025-02-10,Uber,-380
+2025-02-11,Uber,-438
+2025-02-11,Swiggy,-435
+2025-02-11,Electricity Bill,-2304
+2025-02-11,Zomato,-476
+2025-02-11,Book Purchase,-422
+2025-02-12,Uber,-133
+2025-02-12,Electricity Bill,-2257
+2025-02-12,Electricity Bill,-2120
+2025-02-13,Book Purchase,-423
+2025-02-13,Book Purchase,-997
+2025-02-13,Book Purchase,-647
+2025-02-14,Medicine,-508
+2025-02-14,Zomato,-527
+2025-02-14,Zomato,-180
+2025-02-16,Salary,25653
+2025-02-16,Netflix,-604
+2025-02-16,Metro,-135
+2025-02-16,Zomato,-201
+2025-02-16,Swiggy,-276
+2025-02-16,Swiggy,-562
+2025-02-16,Zomato,-420
+2025-02-16,Metro,-116
+2025-02-16,Amazon,-2671
+2025-02-17,Netflix,-551
+2025-02-17,Netflix,-324
+2025-02-17,Metro,-62
+2025-02-17,Electricity Bill,-1931
+2025-02-17,Book Purchase,-204
+2025-02-18,Netflix,-460
+2025-02-18,Electricity Bill,-1381
+2025-02-18,Electricity Bill,-1525
+2025-02-19,Medicine,-753
+2025-02-19,Book Purchase,-427
+2025-02-19,Netflix,-770
+2025-02-19,Netflix,-332
+2025-02-19,Salary,34562
+2025-02-20,Medicine,-133
+2025-02-20,Swiggy,-468
+2025-02-20,Medicine,-755
+2025-02-20,Netflix,-348
+2025-02-21,Uber,-85
+2025-02-21,Metro,-88
+2025-02-21,Swiggy,-513
+2025-02-21,Amazon,-1131
+2025-02-21,Netflix,-338
+2025-02-22,Amazon,-884
+2025-02-22,Amazon,-2122
+2025-02-22,Swiggy,-353
+2025-02-22,Book Purchase,-405
+2025-02-22,Salary,43397
+2025-02-23,Uber,-350
+2025-02-23,Metro,-59
+2025-02-23,Swiggy,-409
+2025-02-24,Electricity Bill,-1873
+2025-02-24,Book Purchase,-454
+2025-02-24,Medicine,-743
+2025-02-25,Netflix,-520
+2025-02-26,Metro,-97
+2025-02-28,Metro,-139
+2025-02-28,Salary,41352
+2025-02-28,Uber,-352
+2025-02-28,Medicine,-506
+2025-03-01,Electricity Bill,-1853
+2025-03-01,Book Purchase,-468
+2025-03-02,Metro,-73
+2025-03-02,Uber,-590
+2025-03-02,Swiggy,-307
+2025-03-04,Salary,39978
+2025-03-04,Swiggy,-582
+2025-03-04,Book Purchase,-927
+2025-03-05,Zomato,-534
+2025-03-05,Uber,-531
+2025-03-05,Amazon,-1848
+2025-03-06,Book Purchase,-382
+2025-03-06,Salary,36866
+2025-03-06,Book Purchase,-341
+2025-03-06,Zomato,-716
+2025-03-07,Book Purchase,-488
+2025-03-08,Swiggy,-187
+2025-03-08,Zomato,-277
+2025-03-08,Uber,-411
+2025-03-09,Electricity Bill,-1719
+2025-03-09,Medicine,-1254
+2025-03-10,Medicine,-757
+2025-03-10,Netflix,-611
+2025-03-10,Salary,30737
+2025-03-10,Book Purchase,-799
+2025-03-10,Medicine,-658
+2025-03-11,Electricity Bill,-921
+2025-03-11,Electricity Bill,-1566
+2025-03-11,Electricity Bill,-1950
+2025-03-11,Swiggy,-279
+2025-03-12,Salary,29547
+2025-03-13,Medicine,-476
+2025-03-13,Amazon,-2094
+2025-03-13,Amazon,-2219
+2025-03-14,Metro,-193
+2025-03-14,Salary,35079
+2025-03-14,Netflix,-665
+2025-03-14,Amazon,-1773
+2025-03-15,Uber,-156
+2025-03-16,Uber,-236
+2025-03-16,Book Purchase,-663
+2025-03-16,Salary,34042
+2025-03-17,Salary,40569
+2025-03-17,Metro,-28
+2025-03-17,Zomato,-433
+2025-03-18,Uber,-564
+2025-03-18,Metro,-34
+2025-03-19,Amazon,-548
+2025-03-19,Medicine,-1005
+2025-03-20,Salary,39011
+2025-03-20,Metro,-117
+2025-03-20,Uber,-528
+2025-03-20,Medicine,-1471
+2025-03-20,Netflix,-624
+2025-03-20,Netflix,-579
+2025-03-21,Zomato,-233
+2025-03-21,Netflix,-303
+2025-03-21,Metro,-34
+2025-03-21,Metro,-61
+2025-03-22,Salary,31735
+2025-03-22,Electricity Bill,-2421
+2025-03-22,Uber,-450
+2025-03-23,Swiggy,-511
+2025-03-23,Netflix,-483
+2025-03-24,Book Purchase,-1025
+2025-03-24,Uber,-336
+2025-03-25,Amazon,-570
+2025-03-26,Uber,-107
+2025-03-27,Zomato,-375
+2025-03-27,Amazon,-683
+2025-03-27,Medicine,-875
+2025-03-27,Zomato,-197
+2025-03-28,Netflix,-372
+2025-03-30,Netflix,-566
+2025-03-30,Medicine,-279
+2025-03-30,Uber,-491
+2025-03-30,Metro,-34
+2025-03-31,Salary,32891
+2025-03-31,Zomato,-284
+2025-03-31,Amazon,-1863
+2025-03-31,Book Purchase,-621
+2025-03-31,Salary,39817
+2025-04-01,Zomato,-333
+2025-04-01,Electricity Bill,-2378
+2025-04-02,Swiggy,-425
+2025-04-02,Zomato,-716
+2025-04-03,Amazon,-1591
+2025-04-04,Swiggy,-588
+2025-04-06,Salary,32707
+2025-04-06,Book Purchase,-504
+2025-04-06,Medicine,-1368
+2025-04-06,Medicine,-852
+2025-04-08,Book Purchase,-693
+2025-04-08,Uber,-179
+2025-04-08,Salary,44823
+2025-04-09,Electricity Bill,-960
+2025-04-09,Zomato,-383
+2025-04-09,Netflix,-365
+2025-04-09,Medicine,-666
+2025-04-10,Netflix,-558
+2025-04-10,Electricity Bill,-1885
+2025-04-11,Book Purchase,-712
+2025-04-12,Salary,28339
+2025-04-12,Medicine,-318
+2025-04-12,Netflix,-285
+2025-04-13,Medicine,-393
+2025-04-13,Amazon,-2750
+2025-04-13,Book Purchase,-899
+2025-04-14,Uber,-248
+2025-04-14,Amazon,-2502
+2025-04-15,Electricity Bill,-893
+2025-04-15,Amazon,-2270
+2025-04-16,Netflix,-686
+2025-04-16,Swiggy,-224
+2025-04-18,Netflix,-675
+2025-04-18,Electricity Bill,-2065
+2025-04-18,Uber,-242
+2025-04-18,Swiggy,-482
+2025-04-19,Amazon,-1385
+2025-04-19,Amazon,-1594
+2025-04-19,Book Purchase,-496
+2025-04-19,Netflix,-489
+2025-04-20,Uber,-311
+2025-04-21,Salary,38040
+2025-04-22,Swiggy,-373
+2025-04-22,Zomato,-293
+2025-04-23,Uber,-585
+2025-04-23,Amazon,-226
+2025-04-23,Medicine,-159
+2025-04-23,Book Purchase,-1101
+2025-04-24,Uber,-158
+2025-04-24,Medicine,-1475
+2025-04-25,Amazon,-2832
+2025-04-25,Zomato,-181
+2025-04-25,Swiggy,-678
+2025-04-26,Book Purchase,-203
+2025-04-26,Uber,-159
+2025-04-26,Swiggy,-592
+2025-04-28,Salary,35827
+2025-04-28,Zomato,-425
+2025-05-01,Swiggy,-496
+2025-05-01,Metro,-70
+2025-05-02,Zomato,-519
+2025-05-02,Netflix,-787
+2025-05-03,Swiggy,-280
+2025-05-03,Amazon,-1759
+2025-05-04,Amazon,-791
+2025-05-04,Book Purchase,-666
+2025-05-04,Medicine,-1237
+2025-05-04,Medicine,-1017
+2025-05-04,Medicine,-463
+2025-05-05,Electricity Bill,-1189
+2025-05-05,Metro,-96
+2025-05-05,Salary,32629
+2025-05-05,Netflix,-279
+2025-05-05,Medicine,-500
+2025-05-05,Amazon,-1809
+2025-05-06,Swiggy,-405
+2025-05-06,Electricity Bill,-1037
+2025-05-06,Electricity Bill,-1352
+2025-05-07,Zomato,-786
+2025-05-07,Swiggy,-374
+2025-05-08,Book Purchase,-1068
+2025-05-08,Electricity Bill,-2041
+2025-05-08,Netflix,-369
+2025-05-08,Salary,36808
+2025-05-08,Netflix,-452
+2025-05-08,Swiggy,-573
+2025-05-09,Zomato,-267
+2025-05-09,Medicine,-1316
+2025-05-10,Medicine,-333
+2025-05-10,Uber,-421
+2025-05-10,Electricity Bill,-2416
+2025-05-10,Netflix,-268
+2025-05-10,Salary,34375
+2025-05-12,Medicine,-704
+2025-05-14,Medicine,-341
+2025-05-14,Medicine,-1054
+2025-05-14,Electricity Bill,-1404
+2025-05-14,Netflix,-443
+2025-05-15,Swiggy,-569
+2025-05-15,Amazon,-1126
+2025-05-15,Medicine,-539
+2025-05-16,Medicine,-684
+2025-05-16,Amazon,-2072
+2025-05-16,Electricity Bill,-1233
+2025-05-16,Book Purchase,-688
+2025-05-17,Amazon,-1994
+2025-05-18,Swiggy,-312
+2025-05-18,Uber,-179
+2025-05-18,Netflix,-754
+2025-05-20,Electricity Bill,-1794
+2025-05-20,Netflix,-646
+2025-05-20,Medicine,-996
+2025-05-20,Metro,-107
+2025-05-21,Book Purchase,-815
+2025-05-21,Electricity Bill,-1514
+2025-05-21,Netflix,-455
+2025-05-22,Book Purchase,-1142
+2025-05-22,Electricity Bill,-1496
+2025-05-22,Zomato,-788
+2025-05-22,Amazon,-1269
+2025-05-22,Uber,-215
+2025-05-23,Amazon,-1638
+2025-05-24,Swiggy,-251
+2025-05-24,Uber,-115
+2025-05-24,Salary,42348
+2025-05-24,Swiggy,-353
+2025-05-24,Amazon,-2476
+2025-05-25,Netflix,-252
+2025-05-25,Book Purchase,-1007
+2025-05-26,Uber,-359
+2025-05-26,Salary,30338
+2025-05-26,Book Purchase,-769
+2025-05-26,Book Purchase,-1161
+2025-05-26,Medicine,-1179
+2025-05-26,Netflix,-294
+2025-05-27,Swiggy,-357
+2025-05-27,Salary,44466
+2025-05-27,Salary,30874
+2025-05-27,Netflix,-526
+2025-05-28,Medicine,-1258
+2025-05-29,Book Purchase,-345
+2025-05-29,Metro,-45
+2025-05-30,Salary,42616
+2025-05-30,Medicine,-1279
+2025-05-30,Uber,-582
+2025-05-30,Swiggy,-538
+2025-05-30,Netflix,-445
+2025-05-30,Netflix,-601
+2025-05-30,Amazon,-1901
+2025-05-31,Uber,-344
+2025-06-01,Swiggy,-238
+2025-06-01,Swiggy,-639
+2025-06-01,Electricity Bill,-1159
+2025-06-01,Book Purchase,-1131
+2025-06-01,Amazon,-289
+2025-06-02,Medicine,-404
+2025-06-02,Zomato,-610
+2025-06-02,Uber,-220
+2025-06-04,Book Purchase,-602
+2025-06-04,Zomato,-417
+2025-06-05,Salary,35886
+2025-06-06,Swiggy,-317
+2025-06-06,Electricity Bill,-1141
+2025-06-07,Netflix,-579
+2025-06-07,Book Purchase,-637
+2025-06-07,Zomato,-516
+2025-06-07,Swiggy,-522
+2025-06-07,Amazon,-721
+2025-06-08,Salary,30091
+2025-06-08,Netflix,-611
+2025-06-08,Medicine,-1176
+2025-06-08,Electricity Bill,-1064
+2025-06-09,Swiggy,-173
+2025-06-09,Zomato,-469
+2025-06-10,Amazon,-761
+2025-06-10,Electricity Bill,-1453
+2025-06-11,Uber,-162
+2025-06-11,Book Purchase,-529
+2025-06-11,Swiggy,-129
+2025-06-12,Electricity Bill,-1548
+2025-06-12,Medicine,-1054
+2025-06-12,Electricity Bill,-1590
+2025-06-13,Swiggy,-209
+2025-06-13,Swiggy,-463
+2025-06-13,Netflix,-441
+2025-06-14,Metro,-166
+2025-06-14,Swiggy,-249
+2025-06-14,Book Purchase,-540
+2025-06-14,Metro,-142
+2025-06-14,Netflix,-501
+2025-06-15,Zomato,-417
+2025-06-15,Zomato,-243
+2025-06-15,Salary,26717
+2025-06-15,Metro,-108
+2025-06-16,Zomato,-384
+2025-06-16,Amazon,-1668
+2025-06-17,Medicine,-338
+2025-06-17,Salary,39763
+2025-06-17,Netflix,-365
+2025-06-17,Medicine,-981
+2025-06-19,Swiggy,-660
+2025-06-19,Metro,-108
+2025-06-19,Electricity Bill,-1016
+2025-06-20,Uber,-290
+2025-06-20,Electricity Bill,-2442
+2025-06-21,Uber,-387
+2025-06-22,Book Purchase,-1153
+2025-06-22,Metro,-64
+2025-06-22,Uber,-576
+2025-06-23,Medicine,-254
+2025-06-23,Electricity Bill,-1651
+2025-06-24,Medicine,-493
+2025-06-24,Netflix,-525
+2025-06-24,Electricity Bill,-1123
+2025-06-25,Electricity Bill,-1129
+2025-06-25,Zomato,-197
+2025-06-25,Uber,-329
+2025-06-26,Swiggy,-460
+2025-06-26,Medicine,-314
+2025-06-26,Uber,-459
+2025-06-26,Amazon,-2817
+2025-06-26,Amazon,-1768
+2025-06-27,Metro,-48
+2025-06-28,Electricity Bill,-909
+2025-06-28,Metro,-114
+2025-06-29,Swiggy,-610
+2025-06-29,Salary,43557
+2025-06-29,Netflix,-342
+2025-06-30,Electricity Bill,-1362
+2025-07-01,Uber,-361
+2025-07-01,Electricity Bill,-961
+2025-07-02,Zomato,-489
+2025-07-03,Uber,-265
+2025-07-03,Metro,-60
+2025-07-04,Salary,37794
+2025-07-04,Zomato,-465
+2025-07-04,Zomato,-696
+2025-07-05,Amazon,-1180
+2025-07-05,Medicine,-413
+2025-07-06,Metro,-171
+2025-07-07,Metro,-174
+2025-07-07,Salary,43686
+2025-07-08,Swiggy,-546
+2025-07-08,Medicine,-1045
+2025-07-09,Salary,25414
+2025-07-09,Amazon,-2999
+2025-07-11,Book Purchase,-458
+2025-07-11,Metro,-155
+2025-07-11,Book Purchase,-151
+2025-07-11,Book Purchase,-945
+2025-07-11,Medicine,-1257
+2025-07-11,Medicine,-237
+2025-07-13,Salary,44078
+2025-07-14,Netflix,-504
+2025-07-14,Metro,-137
+2025-07-14,Netflix,-365
+2025-07-14,Amazon,-2143
+2025-07-14,Medicine,-708
+2025-07-15,Medicine,-191
+2025-07-15,Book Purchase,-753
+2025-07-15,Electricity Bill,-1569
+2025-07-15,Uber,-226
+2025-07-15,Netflix,-690
+2025-07-16,Amazon,-1550
+2025-07-16,Swiggy,-225
+2025-07-16,Metro,-36
+2025-07-16,Electricity Bill,-889
+2025-07-16,Zomato,-769
+2025-07-16,Metro,-57
+2025-07-16,Uber,-160
+2025-07-17,Metro,-85
+2025-07-17,Medicine,-1406
+2025-07-18,Book Purchase,-817
+2025-07-18,Book Purchase,-1008
+2025-07-19,Electricity Bill,-2283
+2025-07-19,Electricity Bill,-1902
+2025-07-19,Book Purchase,-829
+2025-07-20,Netflix,-559
+2025-07-21,Zomato,-235
+2025-07-21,Amazon,-2631
+2025-07-22,Zomato,-373
+2025-07-22,Salary,39731
+2025-07-22,Uber,-377
+2025-07-22,Metro,-129
+2025-07-22,Metro,-118
+2025-07-23,Swiggy,-585
+2025-07-23,Uber,-376
+2025-07-23,Book Purchase,-1119
+2025-07-23,Zomato,-596
+2025-07-23,Amazon,-1222
+2025-07-23,Amazon,-573
+2025-07-24,Electricity Bill,-1494
+2025-07-24,Netflix,-647
+2025-07-25,Swiggy,-622
+2025-07-25,Book Purchase,-225
+2025-07-25,Electricity Bill,-1913
+2025-07-26,Metro,-168
+2025-07-26,Salary,29299
+2025-07-27,Amazon,-680
+2025-07-27,Uber,-522
+2025-07-28,Netflix,-411
+2025-07-28,Amazon,-334
+2025-07-28,Metro,-122
+2025-07-30,Uber,-254
+2025-07-30,Electricity Bill,-2276
+2025-07-30,Amazon,-2913
+2025-07-30,Swiggy,-248
+2025-07-31,Salary,41334
+2025-07-31,Electricity Bill,-1827
+2025-07-31,Zomato,-720
+2025-08-01,Swiggy,-228
+2025-08-01,Metro,-198
+2025-08-01,Book Purchase,-1104
+2025-08-01,Salary,37762
+2025-08-02,Uber,-477
+2025-08-02,Uber,-117
+2025-08-02,Netflix,-476
+2025-08-03,Uber,-458
+2025-08-03,Zomato,-747
+2025-08-03,Book Purchase,-660
+2025-08-03,Electricity Bill,-1666
+2025-08-03,Zomato,-295
+2025-08-04,Swiggy,-489
+2025-08-04,Book Purchase,-702
+2025-08-04,Swiggy,-601
+2025-08-04,Electricity Bill,-2187
+2025-08-04,Swiggy,-563
+2025-08-05,Book Purchase,-1146
+2025-08-05,Swiggy,-669
+2025-08-05,Zomato,-250
+2025-08-06,Medicine,-718
+2025-08-07,Swiggy,-530
+2025-08-08,Electricity Bill,-809
+2025-08-09,Salary,35286
+2025-08-09,Metro,-125
+2025-08-09,Uber,-524
+2025-08-10,Electricity Bill,-975
+2025-08-11,Swiggy,-574
+2025-08-11,Book Purchase,-703
+2025-08-11,Uber,-430
+2025-08-11,Uber,-322
+2025-08-12,Book Purchase,-386
+2025-08-14,Medicine,-517
+2025-08-14,Medicine,-131
+2025-08-15,Medicine,-538
+2025-08-15,Electricity Bill,-2317
+2025-08-15,Metro,-150
+2025-08-15,Book Purchase,-1023
+2025-08-16,Uber,-455
+2025-08-16,Amazon,-618
+2025-08-17,Netflix,-278
+2025-08-17,Netflix,-539
+2025-08-17,Salary,33176
+2025-08-18,Uber,-296
+2025-08-19,Swiggy,-668
+2025-08-19,Medicine,-1267
+2025-08-19,Metro,-183
+2025-08-19,Uber,-527
+2025-08-19,Metro,-102
+2025-08-19,Netflix,-285
+2025-08-20,Amazon,-691
+2025-08-20,Swiggy,-327
+2025-08-20,Salary,34663
+2025-08-21,Zomato,-466
+2025-08-21,Electricity Bill,-1369
+2025-08-21,Salary,41403
+2025-08-21,Salary,30179
+2025-08-21,Electricity Bill,-1003
+2025-08-21,Amazon,-1524
+2025-08-22,Zomato,-661
+2025-08-22,Book Purchase,-841
+2025-08-22,Salary,31629
+2025-08-22,Medicine,-1450
+2025-08-23,Netflix,-263
+2025-08-23,Amazon,-2716
+2025-08-23,Uber,-94
+2025-08-23,Swiggy,-195
+2025-08-23,Medicine,-1180
+2025-08-24,Metro,-77
+2025-08-24,Medicine,-718
+2025-08-25,Uber,-204
+2025-08-25,Zomato,-527
+2025-08-25,Metro,-132
+2025-08-25,Medicine,-622
+2025-08-26,Book Purchase,-995
+2025-08-27,Amazon,-1520
+2025-08-27,Netflix,-514
+2025-08-27,Amazon,-1540
+2025-08-27,Medicine,-607
+2025-08-29,Amazon,-1586
+2025-08-29,Netflix,-527
+2025-08-29,Salary,37232
+2025-08-29,Salary,40473
+2025-08-30,Salary,30897
+2025-08-31,Netflix,-551
+2025-08-31,Uber,-166
+2025-08-31,Uber,-88
+2025-08-31,Metro,-33
+2025-09-01,Salary,30615
+2025-09-03,Uber,-132
+2025-09-03,Netflix,-509
+2025-09-03,Amazon,-1378
+2025-09-03,Metro,-121
+2025-09-05,Electricity Bill,-1409
+2025-09-05,Metro,-136
+2025-09-06,Netflix,-256
+2025-09-06,Book Purchase,-407
+2025-09-06,Uber,-564
+2025-09-07,Salary,25388
+2025-09-07,Uber,-400
+2025-09-07,Zomato,-245
+2025-09-08,Metro,-62
+2025-09-08,Zomato,-244
+2025-09-08,Medicine,-1043
+2025-09-08,Swiggy,-252
+2025-09-09,Book Purchase,-918
+2025-09-09,Medicine,-1100
+2025-09-11,Swiggy,-236
+2025-09-11,Uber,-579
+2025-09-11,Medicine,-685
+2025-09-12,Uber,-317
+2025-09-12,Amazon,-1142
+2025-09-12,Book Purchase,-680
+2025-09-13,Medicine,-1121
+2025-09-14,Netflix,-253
+2025-09-14,Netflix,-272
+2025-09-15,Amazon,-936
+2025-09-15,Uber,-255
+2025-09-15,Metro,-167
+2025-09-16,Zomato,-403
+2025-09-16,Electricity Bill,-2202
+2025-09-16,Swiggy,-151
+2025-09-16,Metro,-75
+2025-09-17,Book Purchase,-1000
+2025-09-17,Zomato,-439
+2025-09-17,Book Purchase,-234
+2025-09-18,Uber,-151
+2025-09-18,Metro,-55
+2025-09-18,Salary,33013
+2025-09-18,Zomato,-196
+2025-09-19,Zomato,-614
+2025-09-19,Book Purchase,-1194
+2025-09-20,Electricity Bill,-1027
+2025-09-20,Salary,33525
+2025-09-21,Netflix,-664
+2025-09-21,Netflix,-446
+2025-09-21,Swiggy,-438
+2025-09-22,Metro,-77
+2025-09-22,Electricity Bill,-941
+2025-09-22,Uber,-418
+2025-09-23,Zomato,-158
+2025-09-23,Amazon,-943
+2025-09-23,Book Purchase,-391
+2025-09-23,Book Purchase,-436
+2025-09-23,Swiggy,-554
+2025-09-23,Uber,-245
+2025-09-23,Netflix,-688
+2025-09-23,Metro,-134
+2025-09-23,Swiggy,-376
+2025-09-24,Netflix,-668
+2025-09-25,Book Purchase,-1122
+2025-09-25,Netflix,-580
+2025-09-26,Salary,41257
+2025-09-26,Electricity Bill,-1636
+2025-09-27,Swiggy,-502
+2025-09-27,Uber,-550
+2025-09-27,Netflix,-405
+2025-09-29,Book Purchase,-314
+2025-09-29,Amazon,-873
+2025-09-30,Netflix,-469
+2025-10-01,Electricity Bill,-2489
+2025-10-01,Zomato,-374
+2025-10-01,Zomato,-329
+2025-10-01,Medicine,-497
+2025-10-02,Netflix,-467
+2025-10-02,Salary,39120
+2025-10-02,Netflix,-400
+2025-10-02,Swiggy,-437
+2025-10-02,Salary,29704
+2025-10-02,Electricity Bill,-961
+2025-10-03,Uber,-308
+2025-10-03,Metro,-113
+2025-10-03,Amazon,-742
+2025-10-03,Amazon,-542
+2025-10-04,Uber,-316
+2025-10-04,Book Purchase,-227
+2025-10-04,Metro,-99
+2025-10-05,Medicine,-177
+2025-10-05,Zomato,-493
+2025-10-05,Zomato,-686
+2025-10-06,Netflix,-261
+2025-10-06,Netflix,-778
+2025-10-07,Medicine,-249
+2025-10-07,Book Purchase,-205
+2025-10-07,Metro,-58
+2025-10-07,Salary,44087
+2025-10-07,Metro,-144
+2025-10-08,Amazon,-1375
+2025-10-08,Uber,-566
+2025-10-09,Book Purchase,-180
+2025-10-09,Medicine,-654
+2025-10-09,Uber,-496
+2025-10-10,Electricity Bill,-1732
+2025-10-10,Uber,-122
+2025-10-10,Netflix,-790
+2025-10-10,Metro,-173
+2025-10-10,Salary,28054
+2025-10-11,Medicine,-1229
+2025-10-11,Amazon,-309
+2025-10-11,Electricity Bill,-2327
+2025-10-12,Netflix,-589
+2025-10-12,Metro,-44
+2025-10-12,Amazon,-774
+2025-10-12,Salary,29005
+2025-10-12,Amazon,-2551
+2025-10-13,Amazon,-1383
+2025-10-13,Electricity Bill,-1011
+2025-10-14,Medicine,-574
+2025-10-14,Uber,-423
+2025-10-14,Electricity Bill,-2071
+2025-10-14,Netflix,-329
+2025-10-15,Book Purchase,-1009
+2025-10-15,Book Purchase,-741
+2025-10-15,Metro,-185
+2025-10-15,Salary,29884
+2025-10-16,Medicine,-1494
+2025-10-16,Book Purchase,-1185
+2025-10-16,Uber,-402
+2025-10-16,Metro,-146
+2025-10-16,Uber,-96
+2025-10-16,Amazon,-2393
+2025-10-17,Netflix,-522
+2025-10-18,Uber,-341
+2025-10-18,Salary,32238
+2025-10-19,Medicine,-1227
+2025-10-20,Swiggy,-656
+2025-10-20,Electricity Bill,-1147
+2025-10-20,Metro,-76
+2025-10-20,Uber,-203
+2025-10-21,Swiggy,-315
+2025-10-21,Medicine,-712
+2025-10-21,Electricity Bill,-1816
+2025-10-22,Electricity Bill,-1526
+2025-10-22,Electricity Bill,-2253
+2025-10-22,Electricity Bill,-1612
+2025-10-23,Metro,-60
+2025-10-23,Metro,-61
+2025-10-23,Salary,40417
+2025-10-24,Zomato,-471
+2025-10-24,Salary,36289
+2025-10-25,Amazon,-356
+2025-10-26,Zomato,-438
+2025-10-26,Swiggy,-142
+2025-10-26,Book Purchase,-928
+2025-10-26,Zomato,-761
+2025-10-27,Netflix,-309
+2025-10-27,Medicine,-286
+2025-10-27,Electricity Bill,-1541
+2025-10-27,Zomato,-739
+2025-10-28,Metro,-104
+2025-10-28,Book Purchase,-594
+2025-10-28,Electricity Bill,-1030
+2025-10-28,Uber,-504
+2025-10-29,Electricity Bill,-1139
+2025-10-29,Zomato,-546
+2025-10-29,Amazon,-2529
+2025-10-29,Swiggy,-180
+2025-10-29,Metro,-128
+2025-10-29,Book Purchase,-729
+2025-10-30,Uber,-517
+2025-10-30,Salary,43600
+2025-10-30,Uber,-400
+2025-10-31,Book Purchase,-603
+2025-10-31,Zomato,-369
+2025-11-01,Swiggy,-140
+2025-11-01,Medicine,-163
+2025-11-01,Amazon,-1998
+2025-11-01,Swiggy,-437
+2025-11-01,Salary,38737
+2025-11-01,Salary,33019
+2025-11-01,Salary,36832
+2025-11-01,Swiggy,-231
+2025-11-02,Netflix,-593
+2025-11-02,Metro,-153
+2025-11-02,Netflix,-498
+2025-11-02,Swiggy,-658
+2025-11-03,Zomato,-264
+2025-11-03,Salary,34876
+2025-11-04,Netflix,-342
+2025-11-05,Salary,31165
+2025-11-06,Uber,-143
+2025-11-06,Electricity Bill,-2384
+2025-11-06,Zomato,-620
+2025-11-07,Electricity Bill,-1405
+2025-11-07,Metro,-182
+2025-11-07,Amazon,-1082
+2025-11-07,Swiggy,-287
+2025-11-08,Medicine,-171
+2025-11-08,Amazon,-318
+2025-11-08,Uber,-398
+2025-11-09,Medicine,-579
+2025-11-09,Metro,-91
+2025-11-09,Swiggy,-586
+2025-11-09,Netflix,-228
+2025-11-09,Electricity Bill,-2493
+2025-11-10,Zomato,-291
+2025-11-10,Book Purchase,-166
+2025-11-10,Medicine,-509
+2025-11-11,Salary,40009
+2025-11-11,Metro,-185
+2025-11-11,Uber,-569
+2025-11-11,Electricity Bill,-1626
+2025-11-12,Uber,-415
+2025-11-12,Book Purchase,-1140
+2025-11-12,Metro,-72
+2025-11-12,Swiggy,-258
+2025-11-13,Metro,-38
+2025-11-14,Netflix,-649
+2025-11-14,Salary,31808
+2025-11-15,Uber,-508
+2025-11-16,Swiggy,-456
+2025-11-17,Swiggy,-280
+2025-11-17,Medicine,-258
+2025-11-17,Zomato,-358
+2025-11-17,Medicine,-1208
+2025-11-18,Electricity Bill,-2021
+2025-11-18,Electricity Bill,-2061
+2025-11-18,Medicine,-254
+2025-11-18,Amazon,-2005
+2025-11-19,Book Purchase,-189
+2025-11-20,Swiggy,-457
+2025-11-20,Amazon,-2622
+2025-11-21,Electricity Bill,-1448
+2025-11-21,Swiggy,-532
+2025-11-21,Salary,33962
+2025-11-21,Amazon,-380
+2025-11-23,Swiggy,-183
+2025-11-24,Electricity Bill,-2051
+2025-11-24,Amazon,-1203
+2025-11-24,Metro,-59
+2025-11-24,Netflix,-377
+2025-11-24,Amazon,-1705
+2025-11-24,Metro,-195
+2025-11-24,Zomato,-226
+2025-11-24,Book Purchase,-249
+2025-11-24,Salary,34899
+2025-11-24,Swiggy,-534
+2025-11-24,Medicine,-388
+2025-11-25,Book Purchase,-828
+2025-11-25,Uber,-459
+2025-11-26,Zomato,-640
+2025-11-26,Medicine,-472
+2025-11-27,Salary,41216
+2025-11-27,Book Purchase,-891
+2025-11-27,Metro,-46
+2025-11-28,Amazon,-1422
+2025-11-28,Salary,42502
+2025-11-28,Electricity Bill,-2341
+2025-11-28,Metro,-88
+2025-11-29,Uber,-126
+2025-11-29,Netflix,-417
+2025-11-30,Zomato,-159
+2025-11-30,Amazon,-1515
+2025-12-01,Medicine,-1077
+2025-12-01,Metro,-35
+2025-12-01,Swiggy,-302
+2025-12-02,Swiggy,-555
+2025-12-02,Netflix,-427
+2025-12-02,Netflix,-453
+2025-12-02,Salary,40202
+2025-12-02,Amazon,-971
+2025-12-02,Medicine,-176
+2025-12-02,Medicine,-1360
+2025-12-02,Netflix,-462
+2025-12-02,Medicine,-392
+2025-12-02,Swiggy,-121
+2025-12-03,Uber,-111
+2025-12-03,Book Purchase,-797
+2025-12-03,Swiggy,-478
+2025-12-04,Netflix,-776
+2025-12-04,Metro,-152
+2025-12-04,Zomato,-729
+2025-12-05,Uber,-465
+2025-12-05,Metro,-44
+2025-12-06,Amazon,-2277
+2025-12-06,Uber,-587
+2025-12-07,Uber,-467
+2025-12-07,Metro,-194
+2025-12-08,Metro,-121
+2025-12-08,Uber,-202
+2025-12-08,Salary,34425
+2025-12-08,Amazon,-2917
+2025-12-08,Amazon,-854
+2025-12-09,Metro,-88
+2025-12-09,Uber,-568
+2025-12-10,Uber,-417
+2025-12-10,Netflix,-724
+2025-12-10,Book Purchase,-341
+2025-12-11,Amazon,-1191
+2025-12-11,Uber,-308
+2025-12-11,Electricity Bill,-1889
+2025-12-12,Zomato,-784
+2025-12-12,Electricity Bill,-1448
+2025-12-12,Book Purchase,-899
+2025-12-13,Uber,-355
+2025-12-13,Electricity Bill,-1997
+2025-12-13,Swiggy,-572
+2025-12-14,Zomato,-296
+2025-12-15,Uber,-266
+2025-12-15,Medicine,-286
+2025-12-16,Uber,-344
+2025-12-16,Netflix,-554
+2025-12-16,Amazon,-2825
+2025-12-17,Metro,-43
+2025-12-17,Medicine,-1393
+2025-12-17,Swiggy,-464
+2025-12-17,Swiggy,-152
+2025-12-18,Zomato,-770
+2025-12-18,Metro,-42
+2025-12-19,Amazon,-851
+2025-12-20,Swiggy,-567
+2025-12-20,Medicine,-1010
+2025-12-20,Medicine,-186
+2025-12-21,Netflix,-683
+2025-12-21,Salary,28540
+2025-12-22,Amazon,-728
+2025-12-22,Swiggy,-354
+2025-12-23,Swiggy,-365
+2025-12-23,Swiggy,-552
+2025-12-23,Uber,-276
+2025-12-23,Swiggy,-699
+2025-12-24,Zomato,-795
+2025-12-24,Metro,-34
+2025-12-25,Salary,27261
+2025-12-25,Netflix,-370
+2025-12-25,Netflix,-524
+2025-12-26,Zomato,-458
+2025-12-26,Medicine,-1200
+2025-12-26,Book Purchase,-590
+2025-12-27,Electricity Bill,-2000
+2025-12-27,Netflix,-674
+2025-12-27,Medicine,-749
+2025-12-28,Zomato,-231
+2025-12-29,Metro,-149
+2025-12-29,Medicine,-134
+2025-12-29,Medicine,-1173
+2025-12-29,Metro,-107
+2025-12-29,Netflix,-427
+2025-12-30,Uber,-109
+2025-12-30,Salary,34828
+2025-12-31,Zomato,-387
+2025-12-31,Swiggy,-202
