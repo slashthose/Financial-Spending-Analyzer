@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FinWise — Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<link rel="stylesheet" href="/static/css/dashboard.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════ LEFT SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <span class="brand-logo">Fin<em>Wise</em></span>
+    <div class="brand-dot"></div>
+  </div>
+
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">General</div>
+    <a href="#" class="nav-item active" data-section="overview">
+      <span class="nav-icon">◈</span> Overview
+    </a>
+    <a href="#" class="nav-item" data-section="categories">
+      <span class="nav-icon">◉</span> Categories
+    </a>
+    <a href="#" class="nav-item" data-section="trends">
+      <span class="nav-icon">↗</span> Trends
+    </a>
+    <a href="#" class="nav-item" data-section="anomalies">
+      <span class="nav-icon">⚡</span> Anomalies
+    </a>
+
+    <div class="nav-section-label" style="margin-top:24px">AI Tools</div>
+    <a href="#" class="nav-item" data-section="insights">
+      <span class="nav-icon">✦</span> AI Insights
+    </a>
+    <a href="#" class="nav-item" data-section="recommendations">
+      <span class="nav-icon">🎯</span> Recommendations
+    </a>
+
+    <div class="nav-section-label" style="margin-top:24px">Data</div>
+    <a href="#" class="nav-item" data-section="transactions">
+      <span class="nav-icon">≡</span> Transactions
+    </a>
+    <a href="/" class="nav-item">
+      <span class="nav-icon">↩</span> Upload New
+    </a>
+  </nav>
+
+  <!-- Health Score mini card in sidebar -->
+  <div class="sidebar-health">
+    <div class="health-label">Financial Health</div>
+    <div class="health-ring-wrap">
+      <canvas id="healthRingSmall" width="80" height="80"></canvas>
+      <div class="health-center-text">
+        <span class="health-grade" id="sidebarGrade">–</span>
+      </div>
+    </div>
+    <div class="health-score-val" id="sidebarScore">–</div>
+  </div>
+</aside>
+
+<!-- ═══════════════════════════════════════════════════ MAIN CONTENT -->
+<main class="main">
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <h2 class="page-title" id="pageTitle">Good morning ✦</h2>
+      <p class="page-sub" id="pageSub">Loading your financial data…</p>
+    </div>
+    <div class="topbar-right">
+      <div class="date-badge" id="dateBadge">–</div>
+      <button class="btn-refresh" onclick="loadAllData()" title="Refresh">↻</button>
+    </div>
+  </header>
+
+  <!-- ── SECTION: OVERVIEW ── -->
+  <section class="dash-section active" id="section-overview">
+
+    <!-- Row 1: 4 stat cards -->
+    <div class="stat-grid">
+      <div class="stat-card" style="--card-color: var(--blush)">
+        <div class="stat-label">Total Income</div>
+        <div class="stat-val" id="statIncome">–</div>
+        <div class="stat-sub" id="statIncomeRange">–</div>
+        <div class="stat-icon">💰</div>
+      </div>
+      <div class="stat-card" style="--card-color: var(--butter)">
+        <div class="stat-label">Total Expenses</div>
+        <div class="stat-val" id="statExpenses">–</div>
+        <div class="stat-sub" id="statTxCount">–</div>
+        <div class="stat-icon">💸</div>
+      </div>
+      <div class="stat-card" style="--card-color: var(--sage)">
+        <div class="stat-label">Net Savings</div>
+        <div class="stat-val" id="statSavings">–</div>
+        <div class="stat-sub" id="statSavingsRate">–</div>
+        <div class="stat-icon">🌱</div>
+      </div>
+      <div class="stat-card" style="--card-color: var(--lavender)">
+        <div class="stat-label">Spending Rate</div>
+        <div class="stat-val" id="statSpendingRate">–</div>
+        <div class="stat-sub">of income spent</div>
+        <div class="stat-icon">📊</div>
+      </div>
+    </div>
+
+    <!-- Row 2: Categories pie + Expenses by Category (Intelly top row) -->
+    <div class="row-2">
+      <div class="card card-butter" id="cardCategories">
+        <div class="card-header">
+          <div class="card-title">Categories</div>
+          <div class="card-badge">Breakdown</div>
+        </div>
+        <div class="donut-wrap">
+          <canvas id="donutChart"></canvas>
+          <div class="donut-center">
+            <span id="donutTopCat">–</span>
+            <small>top spend</small>
+          </div>
+        </div>
+        <div class="legend" id="catLegend"></div>
+      </div>
+
+      <div class="card card-blush" id="cardIncomeExpense">
+        <div class="card-header">
+          <div class="card-title">Expenditure Graph</div>
+          <div class="card-badge">Monthly</div>
+        </div>
+        <div class="chart-wrap">
+          <canvas id="incomeExpenseChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 3: Sessions (total spent) + Visit Summary (spending trend) — Intelly middle row -->
+    <div class="row-3">
+      <div class="card card-sage">
+        <div class="card-header">
+          <div class="card-title">Total Spent</div>
+          <div class="card-badge">Sessions</div>
+        </div>
+        <div class="sessions-stats">
+          <div class="sess-item">
+            <div class="sess-val" id="sessAvg">–</div>
+            <div class="sess-lbl">avg / month</div>
+          </div>
+          <div class="sess-item">
+            <div class="sess-val" id="sessMin">–</div>
+            <div class="sess-lbl">minimum</div>
+          </div>
+          <div class="sess-item">
+            <div class="sess-val" id="sessMax">–</div>
+            <div class="sess-lbl">maximum</div>
+          </div>
+        </div>
+        <div class="chart-wrap" style="height:90px">
+          <canvas id="miniSpendChart"></canvas>
+        </div>
+        <div class="peak-day-badge" id="peakDayBadge">Peak: –</div>
+      </div>
+
+      <div class="card card-lavender">
+        <div class="card-header">
+          <div class="card-title">Spending Trend</div>
+          <div class="card-badge">Daily</div>
+        </div>
+        <div class="chart-wrap">
+          <canvas id="trendChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 4: Month-wise + Week-wise (Patient list equivalent) -->
+    <div class="row-4">
+      <div class="card card-peach">
+        <div class="card-header">
+          <div class="card-title">Month-wise Spending</div>
+          <div class="toggle-group">
+            <button class="toggle-btn active" onclick="switchMonthly('stacked')">Stacked</button>
+            <button class="toggle-btn" onclick="switchMonthly('line')">Line</button>
+          </div>
+        </div>
+        <div class="chart-wrap" style="height:200px">
+          <canvas id="monthlyChart"></canvas>
+        </div>
+      </div>
+
+      <div class="card card-teal">
+        <div class="card-header">
+          <div class="card-title">Week-wise Spending</div>
+          <div class="card-badge">By day</div>
+        </div>
+        <div class="chart-wrap" style="height:200px">
+          <canvas id="weeklyChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ── SECTION: CATEGORIES ── -->
+  <section class="dash-section" id="section-categories">
+    <div class="card" style="margin-bottom:20px">
+      <div class="card-header"><div class="card-title">Expenses by Category</div></div>
+      <div class="chart-wrap" style="height:320px"><canvas id="catBarChart"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-header"><div class="card-title">Category Detail</div></div>
+      <div class="cat-table" id="catTable"></div>
+    </div>
+  </section>
+
+  <!-- ── SECTION: TRENDS ── -->
+  <section class="dash-section" id="section-trends">
+    <div class="card" style="margin-bottom:20px">
+      <div class="card-header"><div class="card-title">Daily Spending Trend</div></div>
+      <div class="chart-wrap" style="height:300px"><canvas id="trendChartFull"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-header"><div class="card-title">Income vs Expense vs Savings</div></div>
+      <div class="chart-wrap" style="height:280px"><canvas id="ieChartFull"></canvas></div>
+    </div>
+  </section>
+
+  <!-- ── SECTION: ANOMALIES ── -->
+  <section class="dash-section" id="section-anomalies">
+    <div class="card">
+      <div class="card-header"><div class="card-title">⚡ Unusual Transactions</div>
+        <div class="card-badge" style="background:var(--blush)">AI Detected</div>
+      </div>
+      <p style="font-size:0.82rem;color:var(--muted);margin-bottom:20px">Transactions more than 2 standard deviations above their category average.</p>
+      <div id="anomalyList"></div>
+    </div>
+  </section>
+
+  <!-- ── SECTION: AI INSIGHTS ── -->
+  <section class="dash-section" id="section-insights">
+    <div class="insights-grid" id="insightsGrid"></div>
+  </section>
+
+  <!-- ── SECTION: RECOMMENDATIONS ── -->
+  <section class="dash-section" id="section-recommendations">
+    <div class="health-hero card">
+      <div class="health-hero-left">
+        <div class="card-title">Financial Health Score</div>
+        <div class="health-big-score" id="healthBigScore">–</div>
+        <div class="health-big-grade" id="healthBigGrade">–</div>
+        <div class="health-bars" id="healthBars"></div>
+      </div>
+      <div class="health-hero-right">
+        <canvas id="healthRingBig" width="160" height="160"></canvas>
+      </div>
+    </div>
+    <div class="tips-grid" id="tipsGrid"></div>
+  </section>
+
+  <!-- ── SECTION: TRANSACTIONS ── -->
+  <section class="dash-section" id="section-transactions">
+    <div class="card">
+      <div class="card-header"><div class="card-title">All Transactions</div>
+        <div id="txCount" style="font-size:0.8rem;color:var(--muted)"></div>
+      </div>
+      <div id="txList"></div>
+      <div class="pagination" id="pagination"></div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══════════════════════════════════════════════════ RIGHT SIDEBAR -->
+<aside class="right-sidebar">
+
+  <!-- Calendar Heatmap -->
+  <div class="rs-card">
+    <div class="rs-title">Spending Calendar</div>
+    <div class="rs-month-nav">
+      <button onclick="prevMonth()">‹</button>
+      <span id="calMonthLabel">–</span>
+      <button onclick="nextMonth()">›</button>
+    </div>
+    <div class="cal-grid" id="calGrid"></div>
+    <div class="cal-legend">
+      <span style="font-size:0.7rem;color:var(--muted)">Low</span>
+      <div class="cal-legend-bar"></div>
+      <span style="font-size:0.7rem;color:var(--muted)">High</span>
+    </div>
+  </div>
+
+  <!-- AI Spending Alerts -->
+  <div class="rs-card">
+    <div class="rs-title">✦ AI Spending Alerts</div>
+    <div id="aiAlerts"></div>
+  </div>
+
+  <!-- Savings Wins -->
+  <div class="rs-card rs-card-sage">
+    <div class="rs-title">🌿 Savings Wins</div>
+    <div id="savingsWins"></div>
+  </div>
+
+</aside>
+
+<script src="/static/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FinWise — Your Financial Analyser</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream:     #F5F0E8;
+    --blush:     #F4A7B9;
+    --butter:    #F5E642;
+    --sage:      #B8D4A8;
+    --lavender:  #C9B8E8;
+    --peach:     #FFD9A0;
+    --teal:      #A8D4D4;
+    --ink:       #1A1A2E;
+    --ink2:      #2D2D44;
+    --muted:     #7A7A9A;
+    --white:     #FEFEFE;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── Nav ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 48px;
+    background: rgba(245,240,232,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(26,26,46,0.06);
+  }
+  .logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--ink); letter-spacing: -0.5px; }
+  .logo span { color: var(--blush); }
+  .nav-links { display: flex; gap: 32px; }
+  .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.875rem; font-weight: 500;
+    transition: color 0.2s; }
+  .nav-links a:hover { color: var(--ink); }
+
+  /* ── Hero ── */
+  .hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 120px 32px 60px;
+    position: relative; overflow: hidden;
+  }
+
+  /* floating blobs */
+  .blob {
+    position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.35; pointer-events: none;
+    animation: drift 8s ease-in-out infinite alternate;
+  }
+  .blob-1 { width: 400px; height: 400px; background: var(--blush); top: -80px; left: -100px; animation-delay: 0s; }
+  .blob-2 { width: 350px; height: 350px; background: var(--butter); top: 20%; right: -80px; animation-delay: 2s; }
+  .blob-3 { width: 300px; height: 300px; background: var(--lavender); bottom: 10%; left: 15%; animation-delay: 4s; }
+  .blob-4 { width: 250px; height: 250px; background: var(--sage); bottom: 20%; right: 10%; animation-delay: 1s; }
+  @keyframes drift { from { transform: translateY(0) scale(1); } to { transform: translateY(-30px) scale(1.05); } }
+
+  /* artwork SVG area */
+  .artwork-wrapper {
+    position: relative; z-index: 1; margin-bottom: 48px;
+    animation: float 4s ease-in-out infinite;
+  }
+  @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+
+  .hero-text { text-align: center; position: relative; z-index: 1; max-width: 640px; }
+  .eyebrow {
+    display: inline-block; background: var(--ink); color: var(--butter);
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+    padding: 4px 14px; border-radius: 20px; margin-bottom: 20px;
+  }
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    line-height: 1.15; letter-spacing: -1px;
+    margin-bottom: 18px;
+  }
+  h1 em { font-style: italic; color: var(--blush); }
+  .subtitle {
+    font-size: 1rem; color: var(--muted); line-height: 1.7; margin-bottom: 40px;
+    font-weight: 400;
+  }
+
+  /* ── Upload Area ── */
+  .upload-section { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+  .upload-zone {
+    width: 420px; max-width: 90vw;
+    background: var(--white);
+    border: 2px dashed rgba(26,26,46,0.15);
+    border-radius: 24px;
+    padding: 40px 32px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  .upload-zone:hover, .upload-zone.drag-over {
+    border-color: var(--blush);
+    background: rgba(244,167,185,0.05);
+    transform: translateY(-2px);
+    box-shadow: 0 16px 48px rgba(244,167,185,0.2);
+  }
+  .upload-icon {
+    width: 64px; height: 64px; margin: 0 auto 16px;
+    background: linear-gradient(135deg, var(--blush), var(--lavender));
+    border-radius: 20px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.6rem;
+    box-shadow: 0 8px 24px rgba(244,167,185,0.4);
+  }
+  .upload-title { font-size: 1rem; font-weight: 600; margin-bottom: 6px; }
+  .upload-sub { font-size: 0.8rem; color: var(--muted); }
+  #file-input { display: none; }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--ink); color: var(--white);
+    border: none; border-radius: 14px; padding: 14px 28px;
+    font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 600;
+    cursor: pointer; transition: all 0.2s ease; text-decoration: none;
+    box-shadow: 0 4px 16px rgba(26,26,46,0.2);
+  }
+  .btn-primary:hover { background: var(--ink2); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(26,26,46,0.3); }
+  .btn-demo {
+    background: transparent; border: 1.5px solid rgba(26,26,46,0.15);
+    color: var(--muted); border-radius: 14px; padding: 13px 28px;
+    font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 500;
+    cursor: pointer; transition: all 0.2s;
+  }
+  .btn-demo:hover { border-color: var(--blush); color: var(--ink); }
+  .upload-actions { display: flex; gap: 12px; }
+
+  /* progress */
+  .upload-progress {
+    width: 420px; max-width: 90vw;
+    background: var(--white); border-radius: 16px; padding: 20px 24px;
+    display: none;
+  }
+  .progress-label { font-size: 0.85rem; font-weight: 500; margin-bottom: 10px; }
+  .progress-bar { height: 6px; background: #eee; border-radius: 3px; overflow: hidden; }
+  .progress-fill { height: 100%; background: linear-gradient(90deg, var(--blush), var(--lavender));
+    border-radius: 3px; transition: width 0.4s ease; width: 0%; }
+
+  /* ── Features Strip ── */
+  .features {
+    display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;
+    margin-top: 64px; padding: 0 32px; position: relative; z-index: 1;
+  }
+  .feature-pill {
+    background: var(--white); border-radius: 40px; padding: 10px 20px;
+    display: flex; align-items: center; gap: 8px;
+    font-size: 0.8rem; font-weight: 500; color: var(--ink);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .feature-pill .dot { width: 8px; height: 8px; border-radius: 50%; }
+
+  /* toast */
+  .toast {
+    position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%);
+    background: var(--ink); color: var(--white); border-radius: 12px;
+    padding: 12px 24px; font-size: 0.85rem; font-weight: 500;
+    opacity: 0; transition: opacity 0.3s; pointer-events: none; z-index: 999;
+  }
+  .toast.show { opacity: 1; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Fin<span>Wise</span></div>
+  <div class="nav-links">
+    <a href="#features">Features</a>
+    <a href="https://github.com" target="_blank">GitHub</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <!-- background blobs -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="blob blob-4"></div>
+
+  <!-- SVG Artwork -->
+  <div class="artwork-wrapper">
+    <svg width="220" height="180" viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- coin stack base -->
+      <ellipse cx="110" cy="155" rx="55" ry="14" fill="#F4A7B9" opacity="0.6"/>
+      <ellipse cx="110" cy="143" rx="55" ry="14" fill="#F4A7B9"/>
+      <rect x="55" y="100" width="110" height="43" rx="2" fill="#F4A7B9"/>
+      <ellipse cx="110" cy="100" rx="55" ry="14" fill="#F9C8D4"/>
+      <!-- coin 2 -->
+      <ellipse cx="110" cy="118" rx="44" ry="11" fill="#C9B8E8" opacity="0.6"/>
+      <ellipse cx="110" cy="107" rx="44" ry="11" fill="#C9B8E8"/>
+      <rect x="66" y="72" width="88" height="35" rx="2" fill="#C9B8E8"/>
+      <ellipse cx="110" cy="72" rx="44" ry="11" fill="#DDD0F5"/>
+      <!-- coin 3 -->
+      <ellipse cx="110" cy="88" rx="34" ry="9" fill="#F5E642" opacity="0.6"/>
+      <ellipse cx="110" cy="79" rx="34" ry="9" fill="#F5E642"/>
+      <rect x="76" y="52" width="68" height="27" rx="2" fill="#F5E642"/>
+      <ellipse cx="110" cy="52" rx="34" ry="9" fill="#FBF17A"/>
+      <!-- sparkle stars -->
+      <text x="168" y="55" font-size="18" fill="#B8D4A8" opacity="0.9">✦</text>
+      <text x="30" y="80" font-size="14" fill="#F4A7B9" opacity="0.8">✦</text>
+      <text x="185" y="110" font-size="10" fill="#C9B8E8">✦</text>
+      <text x="20" y="130" font-size="10" fill="#F5E642">✦</text>
+      <!-- mini chart line on top coin -->
+      <polyline points="85,47 92,38 100,43 110,30 120,36 128,28 140,34" stroke="#1A1A2E" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="140" cy="34" r="4" fill="#1A1A2E"/>
+    </svg>
+  </div>
+
+  <div class="hero-text">
+    <span class="eyebrow">Financial Analyser</span>
+    <h1>Know where every<br><em>rupee</em> goes.</h1>
+    <p class="subtitle">Upload your bank CSV and get instant AI-powered insights — spending patterns, anomalies, savings score, and personalised recommendations.</p>
+  </div>
+
+  <div class="upload-section">
+    <div class="upload-zone" id="upload-zone">
+      <div class="upload-icon">📊</div>
+      <div class="upload-title">Drop your bank CSV here</div>
+      <div class="upload-sub">or click to browse — we never store your data</div>
+      <input type="file" id="file-input" accept=".csv">
+    </div>
+
+    <div class="upload-progress" id="upload-progress">
+      <div class="progress-label" id="progress-label">Parsing transactions…</div>
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+    </div>
+
+    <div class="upload-actions">
+      <button class="btn-primary" onclick="document.getElementById('file-input').click()">
+        <span>📂</span> Choose CSV
+      </button>
+      <button class="btn-demo" onclick="loadDemo()">Try with sample data →</button>
+    </div>
+  </div>
+
+  <div class="features" id="features">
+    <div class="feature-pill"><div class="dot" style="background:var(--blush)"></div>Category Mapping</div>
+    <div class="feature-pill"><div class="dot" style="background:var(--butter)"></div>Expense Trends</div>
+    <div class="feature-pill"><div class="dot" style="background:var(--sage)"></div>Savings Score</div>
+    <div class="feature-pill"><div class="dot" style="background:var(--lavender)"></div>Anomaly Detection</div>
+    <div class="feature-pill"><div class="dot" style="background:var(--peach)"></div>AI Insights</div>
+    <div class="feature-pill"><div class="dot" style="background:var(--teal)"></div>Calendar Heatmap</div>
+  </div>
+</section>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const zone = document.getElementById('upload-zone');
+const fileInput = document.getElementById('file-input');
+const progressEl = document.getElementById('upload-progress');
+const fillEl = document.getElementById('progress-fill');
+const labelEl = document.getElementById('progress-label');
+
+zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('drag-over'); });
+zone.addEventListener('dragleave', () => zone.classList.remove('drag-over'));
+zone.addEventListener('drop', e => {
+  e.preventDefault(); zone.classList.remove('drag-over');
+  const file = e.dataTransfer.files[0];
+  if (file) uploadFile(file);
+});
+zone.addEventListener('click', () => fileInput.click());
+fileInput.addEventListener('change', e => { if (e.target.files[0]) uploadFile(e.target.files[0]); });
+
+function showProgress(label) {
+  progressEl.style.display = 'block';
+  labelEl.textContent = label;
+  let w = 0;
+  return setInterval(() => {
+    w = Math.min(w + Math.random() * 15, 85);
+    fillEl.style.width = w + '%';
+  }, 200);
+}
+
+function uploadFile(file) {
+  const fd = new FormData();
+  fd.append('file', file);
+  const timer = showProgress('Parsing your transactions…');
+  fetch('/api/upload', { method: 'POST', body: fd })
+    .then(r => r.json())
+    .then(data => {
+      clearInterval(timer);
+      if (data.success) {
+        fillEl.style.width = '100%';
+        labelEl.textContent = `✓ ${data.summary.total_transactions} transactions loaded`;
+        setTimeout(() => window.location.href = '/dashboard', 800);
+      } else {
+        showToast('⚠️ ' + data.error);
+        progressEl.style.display = 'none';
+      }
+    })
+    .catch(() => { clearInterval(timer); showToast('Upload failed. Check your CSV format.'); progressEl.style.display = 'none'; });
+}
+
+function loadDemo() {
+  const timer = showProgress('Loading sample data…');
+  fetch('/api/sample')
+    .then(r => r.json())
+    .then(data => {
+      clearInterval(timer);
+      fillEl.style.width = '100%';
+      labelEl.textContent = '✓ Sample data ready';
+      setTimeout(() => window.location.href = '/dashboard', 600);
+    });
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3500);
+}
+</script>
+</body>
+</html>
