@@ -446,18 +446,18 @@ The application automatically normalizes many common CSV formats, including diff
 
 ## Landing Page
 
-![Landing Page](assets/landing-page.png)
+![Landing Page](assets/LandingPage.png)
 
 ----
 
 ## Dashboard Overview
 
-![Dashboard](assets/dashboard-overview.png)
+![Dashboard](assets/Dashboard.png)
 
 ----
 ## Financial Health Score
 
-![Health Score](assets/health-score.png)
+![Health Score](assets/HealthScore.png)
 
 ---
 
@@ -515,15 +515,16 @@ This project demonstrates practical experience in:
 * Problem Solving
 
 ---
-
-
-# 📄 License
-
-This project is intended for educational and portfolio purposes.
----
-
 ## 🏆 Key Takeaways
 
 This project showcases how data analytics can be applied to personal finance management. By transforming raw transaction data into actionable insights, the analyzer helps users understand spending behavior, improve financial awareness, and make informed budgeting decisions.
 
 The project combines data science, visualization, and dashboard development into a complete end-to-end analytics solution suitable for portfolio presentation and real-world applications.
+
+---
+
+# 📄 License
+
+This project is intended for educational and portfolio purposes.
+
+
