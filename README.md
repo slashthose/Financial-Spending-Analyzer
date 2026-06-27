@@ -266,10 +266,6 @@ The Streamlit dashboard includes:
 
 * Scikit-Learn
 
-### Dashboard Development
-
-* Streamlit
-
 ---
 
 ## 📁 Project Structure
@@ -291,8 +287,202 @@ Personal-Finance-Spending-Analyzer/
 │
 └── assets/
 ```
+---
+
+## ✨ Features
+
+* 📂 Upload your own bank transaction CSV
+* 💰 Income, Expense & Savings Overview
+* 📈 Monthly Spending Trends
+* 🥧 Category-wise Expense Breakdown
+* 📅 Weekly & Calendar Heatmaps
+* ⚠️ Anomaly Detection for unusual transactions
+* ❤️ Financial Health Score
+* 🤖 AI-powered Financial Insights & Recommendations
+* 📋 Transaction History with Pagination
+* 🎨 Clean and responsive dashboard UI
 
 ---
+
+## 🛠 Tech Stack
+
+### Backend
+
+* Python
+* Flask
+* Pandas
+* NumPy
+
+### Frontend
+
+* HTML5
+* CSS3
+* JavaScript
+* Chart.js
+
+### Development Tools
+
+* VS Code
+* Git
+* GitHub
+
+---
+
+# ⚠️ Important Notice
+
+## Local Execution Recommended
+
+The application is currently optimized for **local execution**.
+
+Although a public deployment is available, certain dashboard features—including charts, analytics, and dynamic API responses—may not function correctly due to deployment-specific limitations that are still being resolved.
+
+**For the complete experience, please clone the repository and run the application locally.**
+
+This provides access to all dashboard features exactly as intended.
+
+---
+
+# 🚀 Running the Project Locally
+
+## 1. Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/financial-analyzer.git
+```
+
+```bash
+cd financial-analyzer
+```
+
+---
+
+## 2. Create a virtual environment
+
+### Windows
+
+```bash
+python -m venv venv
+```
+
+Activate:
+
+```bash
+venv\Scripts\activate
+```
+
+---
+
+### macOS / Linux
+
+```bash
+python3 -m venv venv
+```
+
+Activate:
+
+```bash
+source venv/bin/activate
+```
+
+---
+
+## 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 4. Start the Flask server
+
+```bash
+python app.py
+```
+
+---
+
+## 5. Open your browser
+
+Visit
+
+```
+http://127.0.0.1:5000
+```
+
+---
+
+# 📁 Supported CSV Format
+
+Your CSV should contain transaction records with columns similar to:
+
+| Date       | Description   | Category      | Type    | Amount |
+| ---------- | ------------- | ------------- | ------- | ------ |
+| 2026-04-01 | Salary Credit | Income        | Income  | 45000  |
+| 2026-04-02 | House Rent    | Housing       | Expense | 14000  |
+| 2026-04-03 | Swiggy        | Food & Dining | Expense | 520    |
+
+The application automatically normalizes many common CSV formats, including different column names for dates, descriptions, and amounts.
+
+---
+
+# 📊 Dashboard Modules
+
+* Overview
+* Income vs Expense
+* Monthly Overview
+* Category Analysis
+* Spending Trends
+* Weekly Breakdown
+* Calendar Heatmap
+* Anomaly Detection
+* Financial Health Score
+* AI Insights
+* Transaction History
+
+---
+
+# 📸 Screenshots
+
+## Landing Page
+
+![Landing Page](assets/landing-page.png)
+
+----
+
+## Dashboard Overview
+
+![Dashboard](assets/dashboard-overview.png)
+
+----
+## Financial Health Score
+
+![Health Score](assets/health-score.png)
+
+---
+
+# 📌 Current Status
+
+### Working
+
+* CSV Upload
+* Financial Analytics
+* Dashboard Visualizations
+* AI Insights
+* Anomaly Detection
+* Local Execution
+
+### Under Development
+
+* Production Deployment
+* Deployment-specific API compatibility
+* Performance Optimization
+* Enhanced CSV Compatibility
+
+---
+
+---
+
 
 ## 🚀 Future Enhancements
 
@@ -324,6 +514,12 @@ This project demonstrates practical experience in:
 * Business Insight Generation
 * Problem Solving
 
+---
+
+
+# 📄 License
+
+This project is intended for educational and portfolio purposes.
 ---
 
 ## 🏆 Key Takeaways
