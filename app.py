@@ -89,7 +89,7 @@ def preprocess(df):
     amt_col = next((c for c in df.columns if any(x in c for x in ['amount','amt','debit','credit','value'])), None)
     if amt_col:
         df["amount"] = df["amount"].astype(float)
-        df['amount'] =pd.to_numeric(df[amt_col].astype().str.replace(r'[₹,\s]','',regex=True), errors='coerce').abs().astype(float)
+        df['amount'] =pd.to_numeric(df[amt_col].astype(str).str.replace(r'[₹,\s]','',regex=True), errors='coerce').abs().astype(float)
     df = df.dropna(subset=['amount'])
     df = df[df['amount'] > 0]
     desc_col = next((c for c in df.columns if any(x in c for x in ['desc','narr','particular','detail','remark'])), None)
