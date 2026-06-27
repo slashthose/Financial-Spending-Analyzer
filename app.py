@@ -5,6 +5,45 @@ import os
 from datetime import datetime, timedelta
 import warnings
 warnings.filterwarnings('ignore')
+import math
+import traceback
+
+def make_json_safe(obj):
+    """
+    Recursively converts Pandas/NumPy objects into
+    normal Python types so Flask can jsonify them.
+    """
+
+    if isinstance(obj, dict):
+        return {k: make_json_safe(v) for k, v in obj.items()}
+
+    elif isinstance(obj, list):
+        return [make_json_safe(i) for i in obj]
+
+    elif isinstance(obj, tuple):
+        return tuple(make_json_safe(i) for i in obj)
+
+    elif isinstance(obj, np.integer):
+        return int(obj)
+
+    elif isinstance(obj, np.floating):
+        if math.isnan(obj):
+            return None
+        return float(obj)
+
+    elif isinstance(obj, np.bool_):
+        return bool(obj)
+
+    elif isinstance(obj, pd.Timestamp):
+        return obj.strftime("%Y-%m-%d")
+
+    elif isinstance(obj, pd.Period):
+        return str(obj)
+
+    elif pd.isna(obj):
+        return None
+
+    return obj
 
 app = Flask(__name__)
 
@@ -49,7 +88,8 @@ def preprocess(df):
     df = df.dropna(subset=['date'])
     amt_col = next((c for c in df.columns if any(x in c for x in ['amount','amt','debit','credit','value'])), None)
     if amt_col:
-        df['amount'] = pd.to_numeric(df[amt_col].astype(str).str.replace(r'[₹,\s]','',regex=True), errors='coerce').abs()
+        df["amount"] = df["amount"].astype(float)
+        df['amount'] =pd.to_numeric(df[amt_col].astype().str.replace(r'[₹,\s]','',regex=True), errors='coerce').abs().astype(float)
     df = df.dropna(subset=['amount'])
     df = df[df['amount'] > 0]
     desc_col = next((c for c in df.columns if any(x in c for x in ['desc','narr','particular','detail','remark'])), None)
@@ -83,6 +123,13 @@ def get_categories(df):
     exp = df[df['type']=='expense']
     cat = exp.groupby('category')['amount'].sum().sort_values(ascending=False).reset_index()
     total = cat['amount'].sum()
+    if total == 0:
+        return {
+        "labels": [],
+        "values": [],
+        "percentages": [],
+        "colors": []
+    }
     return {
         'labels': cat['category'].tolist(),
         'values': cat['amount'].round(2).tolist(),
@@ -148,6 +195,15 @@ def get_health_score(df):
     savings_score = min(sr * 2, 100)
     exp = df[df['type']=='expense']
     cat = exp.groupby('category')['amount'].sum()
+    if len(cat)==0:
+        return {
+            "score":0,
+            "grade":"N/A",
+            "savings_rate":0,
+            "spending_rate":0,
+            "top_category":"N/A",
+            "top_category_pct":0
+        }
     total_exp = s['total_expenses']
     food_pct = (cat.get('Food & Dining', 0) / total_exp * 100) if total_exp > 0 else 0
     ent_pct = (cat.get('Entertainment', 0) / total_exp * 100) if total_exp > 0 else 0
@@ -241,47 +297,51 @@ def upload_csv():
     try:
         df = preprocess(pd.read_csv(f))
         _STORE['df'] = df
-        return jsonify({'success': True, 'summary': get_summary(df)})
+        return jsonify(make_json_safe({'success': True, 'summary': get_summary(df)}))
     except Exception as e:
-        return jsonify({'error': str(e)}), 500
+        traceback.print_exc()
+        return jsonify({
+            "success": False,
+            "error": str(e)
+            }),500
 
 @app.route('/api/sample')
 def load_sample():
     _STORE['df'] = generate_sample_data()
-    return jsonify({'success': True, 'summary': get_summary(_STORE['df'])})
+    return jsonify(make_json_safe({'success': True, 'summary': get_summary(_STORE['df'])}))
 
 def df(): return _STORE.get('df')
 
 @app.route('/api/overview')
 def api_overview():
-    d = df(); return jsonify(get_summary(d)) if d is not None else (jsonify({'error':'No data'}),400)
+    d = df(); return jsonify(make_json_safe(get_summary(d))) if d is not None else (jsonify({'error':'No data'}),400)
 @app.route('/api/categories')
 def api_categories():
-    d = df(); return jsonify(get_categories(d)) if d is not None else (jsonify({'error':'No data'}),400)
+    d = df(); return jsonify(make_json_safe(get_categories(d))) if d is not None else (jsonify({'error':'No data'}),400)
 @app.route('/api/income-expense')
 def api_ie():
-    d = df(); return jsonify(get_income_vs_expense(d)) if d is not None else (jsonify({'error':'No data'}),400)
+    d = df(); return jsonify(make_json_safe(get_income_vs_expense(d))) if d is not None else (jsonify({'error':'No data'}),400)
 @app.route('/api/monthly')
 def api_monthly():
-    d = df(); return jsonify(get_monthly_overview(d)) if d is not None else (jsonify({'error':'No data'}),400)
+    d = df(); return jsonify(make_json_safe(get_monthly_overview(d))) if d is not None else (jsonify({'error':'No data'}),400)
 @app.route('/api/weekly')
 def api_weekly():
-    d = df(); return jsonify(get_weekly_breakdown(d)) if d is not None else (jsonify({'error':'No data'}),400)
+    d = df(); return jsonify(make_json_safe(get_weekly_breakdown(d))) if d is not None else (jsonify({'error':'No data'}),400)
 @app.route('/api/trends')
 def api_trends():
-    d = df(); return jsonify(get_trends(d)) if d is not None else (jsonify({'error':'No data'}),400)
+    d = df(); return jsonify(make_json_safe(get_trends(d))) if d is not None else (jsonify({'error':'No data'}),400)
 @app.route('/api/anomalies')
 def api_anomalies():
-    d = df(); return jsonify(detect_anomalies(d)) if d is not None else (jsonify({'error':'No data'}),400)
+    d = df(); return jsonify(make_json_safe(detect_anomalies(d))) if d is not None else (jsonify({'error':'No data'}),400)
 @app.route('/api/calendar')
 def api_calendar():
-    d = df(); return jsonify(get_calendar_heatmap(d)) if d is not None else (jsonify({'error':'No data'}),400)
+    d = df(); return jsonify(make_json_safe(get_calendar_heatmap(d))) if d is not None else (jsonify({'error':'No data'}),400)
 @app.route('/api/health')
 def api_health():
-    d = df(); return jsonify(get_health_score(d)) if d is not None else (jsonify({'error':'No data'}),400)
+    d = df(); return jsonify(make_json_safe(get_health_score(d))) if d is not None else (jsonify({'error':'No data'}),400)
 @app.route('/api/insights')
 def api_insights():
-    d = df(); return jsonify(generate_ai_insights(d)) if d is not None else (jsonify({'error':'No data'}),400)
+    d = df(); return jsonify(make_json_safe(generate_ai_insights(d))) if d is not None else (jsonify({'error':'No data'}),400)
 @app.route('/api/transactions')
 def api_transactions():
     d = df()
@@ -289,9 +349,9 @@ def api_transactions():
     page = int(request.args.get('page',1)); per = 20
     s = d.sort_values('date', ascending=False)
     chunk = s.iloc[(page-1)*per:page*per]
-    return jsonify({'transactions': [{'date':r['date'].strftime('%d %b %Y'),'description':r['description'],
+    return jsonify(make_json_safe({'transactions': [{'date':r['date'].strftime('%d %b %Y'),'description':r['description'],
         'amount':round(r['amount'],2),'category':r['category'],'type':r['type']} for _,r in chunk.iterrows()],
-        'total': len(d), 'page': page})
+        'total': len(d), 'page': page}))
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
